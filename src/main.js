@@ -73,6 +73,7 @@ class LINE extends LineAPI {
             lockjoin: 0,
             lockcancel: 1,
             kick:1,
+	mimic: 0,
             cancel: 1,
             bc: 0,
             bmsg: 1,
