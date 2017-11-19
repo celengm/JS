@@ -739,7 +739,10 @@ let { listMember } = await this.searchGroup(seq.to);
             let lyrics = await this._searchLyrics(payload);
             this._sendMessage(seq,lyrics);
         }
-
+        if(txt == '!timenow') {
+         let d = new Date();
+this._sendMessage(seq, d.getHours()+":"+d.getMinutes()); 
+        }
         if(cmd === 'ip') {
             exec(`curl ipinfo.io/${payload}`,(err, res) => {
                 const result = JSON.parse(res);
