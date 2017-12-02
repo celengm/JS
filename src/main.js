@@ -3,9 +3,9 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
 //TOLONG GANTI SEMUA SEPERTI LOCKUPDATEGROUP TAPI MSG SERTA UNMUTE/MUTE JAN LU OTAK ATIK BEGO~//
-var myBott = ['ue9acf505543f91a03877e4c25602920d'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
+var myBott = ['ue9acf505543f91a03877e4c25602920d','u8f9d76cfab08132d703f958ce3fa8cc0','u7c3a2aa2561b6054468cfed8a4b94c02'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
 
-const myBot = ['u50a1916c7d5b70f6ab0af2f46504c7c5','ue9acf505543f91a03877e4c25602920d'];//TARO MID LU DISINI
+const myBot = ['u7c3a2aa2561b6054468cfed8a4b94c02','u50a1916c7d5b70f6ab0af2f46504c7c5','ue9acf505543f91a03877e4c25602920d'];//TARO MID LU DISINI
 var vx = {};var midnornama = "";var pesane = "";var kickhim = "";var waitMsg = "no";//DO NOT CHANGE THIS
 
 function isAdminOrBot(param) {
@@ -577,12 +577,12 @@ class LINE extends LineAPI {
 
 
         if(txt == 'test speed') {
-            const curTime = (Date.now() / 1000);
+            const curTime = Math.floor(Date.now() / 1000);
 
             await this._sendMessage(seq,'process....');
 
 
-            const rtime = (Date.now() / 1000) - curTime;
+            const rtime = Math.floor(Date.now() / 1000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
         if(cmd == '/spam' && isAdminOrBot(seq.from)) { // untuk spam invite contoh: spm <mid>
@@ -696,7 +696,7 @@ let { listMember } = await this.searchGroup(seq.to);
             await this._acceptGroupInvitationByTicket(id,ticketId);
         }
 
-        if(cmd == 'Nk' && isStaffOrBot(seq.from)){
+        if(cmd == 'Nk' && isAdminOrBot(seq.from)){
            let target = payload.replace('@','');
            let group = await this._getGroups([seq.to]);
            let gm = group[0].members;
