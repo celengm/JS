@@ -10,8 +10,8 @@ Terima Kasih Kepada @Alfathdirk @TCR_TEAM\n\
 ****Nekopoi.host Running****");
 
 const auth = {
-	authToken: ' EnmAOxysvJY1rWT9d0U7./kDOF7TNUFMBOOpAnC7o1W.dkys+D9GJyg/0U6av2X13upjlCeV8Vn+NlZ1vZnnM4U= ',
-	certificate: ' 8305a8e81aac56a40a6aa9d3cde916c46db46631e083721b8f8a3eca4dcda729 ',
+	authToken: ' Eox4JJvYEoDXaiPqec90.J512Z6SieY1Wp5wm4+QmWa.bVfCjUvYBgNe7lHU3Z/H7PnYQe3HWvgEre4m9ia8kbc= ',
+	certificate: ' 021ba7e700ad4cc0851182f992a9181030d1f04aa09cc51d35b0f7aaaaf9c22f ',
 }
  let client =  new LineConnect(auth);
 //let client =  new LineConnect();
